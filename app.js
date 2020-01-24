@@ -21,19 +21,27 @@ console.log(` ${registration.toDateString()} ${registration.toTimeString()}`);
 //Birthday exercise
 
 let birthdate = new Date(1995, 05, 30, 2, 8)
+console.log(`My birthdate is $(birthdate)`);
+
 console.log(birthdate);
 
 console.log(`What is the date 1 billion seconds from my birthday and how old am I or will I be that year?`);
 
 let seconds = 1000000000;
 
-let days = (((seconds/60) / 60) / 24);
+let days = (((seconds / 60) / 60) / 24);
 
 console.log(days);
 
-let nextDate = date.getDate(birthdate) + days; nextDate.setDate(nextDate);
-let newDate;
+let nextDate = birthdate.getDate() + days;
+let newDate = new Date(
+    birthday.getFullYear(),
+    birthdate.getMonth(),
+    birthdate.getDate()
+);
 
-
-
+newDate.setDate();
 console.log(nextDate);
+
+let age = newDate.setFullYear() - birthdate.setFullYear();
+console.log(age);
